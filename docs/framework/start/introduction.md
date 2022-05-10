@@ -19,7 +19,9 @@ Gitee 源码地址：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/g
 
 - 存储：拥有本地记忆，部分配置项采用 `storage` 存储本地，提升使用体验；
 
-- 封装：项目进行了详细的工具类封装如：路由、存储、加/解密、文件处理、主题、NaiveUI 全局方法、组件等
+- 封装：项目进行了详细的工具类封装如：路由、存储、加/解密、文件处理、主题、NaiveUI 全局方法、组件等；
+
+- 注意：GoView 是纯前端项目，没有后台系统，已预装 axios，若需后台请自行二次开发；
 
 部分技术栈为：
 
@@ -53,17 +55,17 @@ Gitee 源码地址：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/g
 
 ## 安装
 
-本项目采用 pnpm 进行包管理，若要使用其它管理方式，请删除 `pnpm-lock.yaml` 并安装依赖
+经过反馈发现非 pnpm 安装方式会有异常报错，暂时只建议 pnpm 安装方式
 
 ```shell
-#pnpm（建议使用nrm切换到淘宝源）
+#pnpm（建议使用nrm切换到淘宝源 https://registry.npmmirror.com/）
 pnpm install
 
-# npm
-npm install
+# npm（暂不建议）
+# npm install
 
-# yarn
-yarn install
+# yarn（暂不建议）
+# yarn install
 
 ```
 
@@ -97,7 +99,6 @@ yarn run build
 
 #Makefile
 make dist
-
 ```
 
 ## 交流
