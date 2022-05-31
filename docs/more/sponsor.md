@@ -11,7 +11,7 @@
 
 开源项目：
 
-- 低代码大屏开发开发平台：**[go-view](https://gitee.com/MTrun/go-view)** ⭐
+- GoView 低代码大屏开发平台：**[go-view](https://gitee.com/MTrun/go-view)** ⭐
 
 - Vue2 大屏展示模板：  **[vue-big-screen](https://gitee.com/MTrun/big-screen-vue-datav)** **5.5K+** ⭐
 - Vue3 大屏展示模板： **[vue-big-screen-plugin](https://gitee.com/MTrun/vue-big-screen-plugin)** **1.1K+** ⭐

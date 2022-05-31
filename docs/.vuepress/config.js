@@ -59,6 +59,14 @@ module.exports = {
       },
       ['/framework/upgrade/upgrade.md', '优化'],
       ['/framework/planning/planning.md', 'V2.0 规划'],
+      {
+        title: '大屏模板',
+        collapsable: true,
+        children: [
+          ['/framework/screenTemplate/vueScreenTemplate.md', 'Vue大屏模板'],
+          ['/framework/screenTemplate/reactScreenTemplate.md', 'React大屏模板'],
+        ],
+      },
       ['/framework/disclaimer/disclaimer.md', '免责声明'],
     ],
   },

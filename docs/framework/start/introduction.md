@@ -5,9 +5,15 @@
 ## 总览
 GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图表或页面元素封装为基础组件，无需编写代码即可制作数据大屏，减少心智负担。当然低代码也不是 “银弹”，希望所有人员都能理智看待此技术。
 
-在线 Demo 地址：[https://www.mtruning.club](https://www.mtruning.club)
+项目纯前端 Demo 地址：[https://www.mtruning.club](https://www.mtruning.club)
+
+项目带后端 Demo 地址：[后端 Demo 地址](http://1.117.240.165:8080/goview/#/login)
 
 Gitee 源码地址：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/go-view)
+
+纯前端分支：`master`  
+
+后端请求案例分支：`master-fetch`
 
 技术点：
 
@@ -37,7 +43,7 @@ Gitee 源码地址：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/g
 | 名称 | 版本    | 名称    | 版本  |
 | ---- | ------- | ------- | ----- |
 | node | 16.14.x | npm     | 8.5.x |
-| pnpm | 6.32.x  | windows | 11    |
+| pnpm | 7.1.x  | windows | 11    |
 
 已完成图表：
 
@@ -56,6 +62,14 @@ Gitee 源码地址：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/g
 ## 安装
 
 经过反馈发现非 pnpm 安装方式会有异常报错，暂时只建议 pnpm 安装方式
+
+安装 pnpm
+
+```shell 
+npm install -g pnpm
+```
+
+安装项目依赖
 
 ```shell
 #pnpm（建议使用nrm切换到淘宝源 https://registry.npmmirror.com/）
