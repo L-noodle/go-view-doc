@@ -28,7 +28,7 @@ Gitee 源码地址：[https://gitee.com/MTrun](https://gitee.com/MTrun)
 本项目采用 pnpm 进行包管理，若要使用其它管理方式，请删除 `pnpm-lock.yaml` 并安装依赖
 
 ```shell
-#pnpm（建议使用nrm切换到淘宝源）
+#pnpm（强烈建议使用pnpm, 建议使用nrm切换到淘宝源）
 pnpm install
 
 # npm
