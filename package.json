@@ -1,15 +1,27 @@
 {
-  "name": "cicd-word",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  },
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "vuepress": "^1.9.7"
-  }
+	"name": "go-view-doc",
+	"version": "1.0.0",
+	"description": "GoView 低代码数据可视化",
+	"repository": "https://www.mtruning.club/",
+	"author": "奔跑的面条",
+	"private": true,
+	"devDependencies": {
+		"chalk": "^4.1.0",
+		"gray-matter": "^4.0.3",
+		"lodash": "^4.17.21",
+		"vite": "^2.9.12",
+		"vitepress": "1.0.0-alpha.29",
+		"yorkie": "^2.0.0"
+	},
+	"scripts": {
+		"dev": "vitepress dev .",
+		"build": "node ./scripts/build.js && vitepress build .",
+		"serve": "vitepress serve ."
+	},
+	"gitHooks": {
+		"commit-msg": "node scripts/verifyCommit.js"
+	},
+	"dependencies": {
+		"vue": "^3.2.41"
+	}
 }

@@ -1,14 +1,14 @@
-## 这个仓库是 GoView 文档，采用 VuePress 搭建
+## 这里是 GoView 文档，采用 VitePress 搭建
 
-在线地址：http://www.mtruning.club:81/
+在线地址：http://www.mtruning.club/
 
-启动代码：npm run docs:dev
+启动代码：npm run dev
 
-打包代码：npm run docs:build
+打包代码：npm run build
 
 Make方式：make dev / make dist
 
-VuePress 说明文档：https://v2.vuepress.vuejs.org
+VitePress 说明文档：https://vitepress.vuejs.org/
 
 ## 总览
 
