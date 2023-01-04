@@ -48,7 +48,7 @@ const asideJson = {
       img: ''
     },
     {
-      name: '互相宣传',
+      name: '广告招租',
       url: '',
       img: ''
     }
@@ -86,6 +86,6 @@ function mapSponsors(sponsors: Sponsors) {
 function mapImgPath(sponsors: Sponsor[]) {
   return sponsors.map(sponsor => ({
     ...sponsor,
-    img: `/cooperative/${sponsor.img}`
+    img: `/sponsor/${sponsor.img}`
   }))
 }

@@ -95,7 +95,7 @@ export default defineConfig({
           },
         ]
       },
-      { text: '关于作者 | 赞助', link: '/sponsor/', activeMatch: '/sponsor/' }
+      { text: '关于作者 | 赞助', link: '/author/', activeMatch: '/author/' }
     ],
 
     sidebar: {

@@ -1,13 +1,25 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, toRaw } from 'vue'
 import { VPDocAsideSponsors } from 'vitepress/theme'
 import { useSponsor } from '../composables/sponsor'
+import { useCooperative } from '../composables/cooperative'
 
-const { data } = useSponsor()
+const { data: cooperativeData } = useCooperative()
+const { data: sponsorData } = useSponsor()
 
+// 广告
+const slogan = {
+  name: '致敬所有的美好',
+  img: '/go-view-tip.svg',
+  extra: '欢迎更多小伙伴参与建设！'
+}
+
+const sponsorList = toRaw(cooperativeData.value)[0].items
+
+// 底部
 const sponsors = computed(() => {
   return (
-    data?.value.map(sponsor => {
+    sponsorData?.value.map(sponsor => {
       return {
         size: sponsor.size === 'big' ? 'mini' : 'xmini',
         items: sponsor.items
@@ -18,15 +30,33 @@ const sponsors = computed(() => {
 </script>
 
 <template>
-  <div class="go-view-tip">
-    <img width="22" height="22" src="/go-view-tip.svg" />
+  <!-- 广告 -->
+  <a
+    class="go-view-tip sponsor-style"
+    v-for="(item, index) in sponsorList"
+    :key="index"
+    :href="item.url"
+    target="_blank"
+  >
+    <img width="22" height="22" :src="item.logo" />
+    <span>
+      <p class="heading">{{ item.name }}</p>
+    </span>
+  </a>
+  <!-- slogan -->
+  <div
+    class="go-view-tip slogan-style"
+    style="margin-top: 1rem; margin-bottom: 1rem"
+  >
+    <img width="22" height="22" :src="slogan.img" />
     <span>
       <p class="extra-info">&nbsp;</p>
-      <p class="heading">致敬所有的美好</p>
-      <p class="extra-info">欢迎更多小伙伴参与建设！</p>
+      <p class="heading">{{ slogan.name }}</p>
+      <p class="extra-info">{{ slogan.extra }}</p>
     </span>
   </div>
-  <div class="VPDocAsideSponsors" v-if="data">
+  <!-- 诗句 -->
+  <div class="VPDocAsideSponsors" v-if="sponsorData">
     <div class="VPSponsors vp-sponsor aside">
       <section
         class="vp-sponsor-section"
@@ -54,8 +84,6 @@ const sponsors = computed(() => {
 
 <style scoped>
 .go-view-tip {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   border-radius: 14px;
   padding-left: 2.5rem;
   padding-top: 0.4rem;
@@ -67,11 +95,44 @@ const sponsors = computed(() => {
   filter: grayscale(100%);
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.75rem;
   background-color: var(--vp-c-bg-alt);
   border: 2px solid var(--vp-c-bg-alt);
   transition: border-color 0.5s;
+}
+/* 广告的样式 */
+.sponsor-style {
+  display: flex;
+  width: 100%;
+  padding: 1.2rem;
+  padding-left: 3.7rem;
+  padding-right: 0.8rem;
+  margin-top: 1rem;
+  color: #5dc7d1;
+  border: 2px solid #68a9d1 !important;
+}
+
+.slogan-style {
+  display: flex;
+  width: 100%;
+  padding-left: 3.7rem;
+  padding-right: 0;
+}
+.sponsor-style .extra-info {
+  opacity: 1;
+}
+
+.sponsor-style img {
+  /* filter: grayscale(0.3) invert(2) !important; */
+}
+
+.go-view-tip.sponsor-style .heading {
+  background-image: linear-gradient(
+    120deg,
+    #54b6d0 16%,
+    var(--vp-c-brand-light),
+    var(--vp-c-brand-light)
+  ) !important;
 }
 /* 原hover */
 .go-view-tip {
@@ -80,11 +141,13 @@ const sponsors = computed(() => {
 }
 .go-view-tip img {
   position: absolute;
-  left: 1.5rem;
+  left: 1rem;
   transition: transform 0.5s;
+  height: 30px;
+  width: auto;
 }
 .go-view-tip:hover img {
-  transform: scale(1.75);
+  transform: scale(1.2);
 }
 
 /* 原hover */
@@ -115,6 +178,6 @@ const sponsors = computed(() => {
   cursor: default;
 }
 .dark .aside .vp-sponsor-grid-item-pd:hover {
-  background-color: var(--vp-c-bg-mute)!important;
+  background-color: var(--vp-c-bg-mute) !important;
 }
 </style>
