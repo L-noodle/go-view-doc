@@ -108,6 +108,14 @@ const dataJson = {
       img: `/cooperative/万道通科技.png`
     },
     {
+      name: '云腾五洲',
+      img: `/cooperative/云腾五洲.png`
+    },
+    {
+      name: '...',
+      img: ''
+    },
+    {
       name: '中国能源建设集团',
       img: `/cooperative/中国能源建设集团.png`,
       alone: true

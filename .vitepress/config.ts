@@ -58,7 +58,8 @@ export default defineConfig({
     },
 
     footer: {
-      copyright: '本文档内容版权为 GoView 作者所有，保留所有权利。'
+      copyright: '本文档内容版权为 GoView 作者所有，保留所有权利。',
+      message: '京ICP备2021034585号-1'
     },
 
     nav: [

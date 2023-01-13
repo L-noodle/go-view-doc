@@ -55,8 +55,6 @@
 
 `index.ts` 内容如下:
 ```ts
-// 展示图片
-import image from '@/assets/images/chart/charts/bar_x.png'
 // 公共类型声明
 import { ConfigType, PackagesCategoryEnum, ChartFrameEnum } from '@/packages/index.d'
 // 当前[信息模块]分类声明
@@ -79,6 +77,23 @@ export const BarCommonConfig: ConfigType = {
   package: PackagesCategoryEnum.CHARTS,
   // 组件框架类型 (注意！若此 Echarts 图表不支持 dataset 格式，则使用 ChartFrameEnum.COMMON)
   chartFrame: ChartFrameEnum.ECHARTS,
+  // 图片 (注意！图片存放的路径必须在 src/assets/images/chart/包分类名称/*)
+  // 文件夹名称需要和包分类名称一致: PackagesCategoryEnum.CHARTS
+  image: 'bar_x.png'
+}
+```
+
+:::warning 注意！
+  `v1.1.9 / v2.1.6` 版本以下，图片需要直接引入。但是开发环境生成的组件，在生产环境的层级展示中图片会有问题。
+:::
+
+使用方式如下：
+```ts
+// 展示图片
+import image from '@/assets/images/chart/charts/bar_x.png'
+
+export const BarCommonConfig: ConfigType = {
+  // .....和上面一致
   // 图片
   image: image
 }
@@ -104,7 +119,7 @@ export const BarCommonConfig: ConfigType = {
 `config.ts` 内容如下，在创建新图表时会执行 `new Config()`
 ```ts
 // 公共类型和方法
-import { echartOptionProfixHandle, publicConfig } from '@/packages/public'
+import { echartOptionProfixHandle, PublicConfigClass } from '@/packages/public'
 // 公共类型
 import { CreateComponentType } from '@/packages/index.d'
 // 获取上面的 index 配置内容
@@ -141,7 +156,7 @@ export const option = {
 }
 
 // 柱状图类
-export default class Config extends publicConfig implements CreateComponentType {
+export default class Config extends PublicConfigClass implements CreateComponentType {
   public key = BarCommonConfig.key
   public chartConfig = cloneDeep(BarCommonConfig)
   // 进行样式合并

@@ -52,6 +52,6 @@ import { onMounted } from 'vue'
 import { fetchReleaseTag } from './.vitepress/utils/fetchReleaseTag.js'
 
 onMounted(() => {
-  fetchReleaseTag('v1.1.5')
+  fetchReleaseTag('v1.1.9')
 })
 </script>

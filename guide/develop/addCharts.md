@@ -32,8 +32,6 @@
 `index.ts` 内容如下：
 
 ```ts
-// 展示图片
-import image from '@/assets/images/chart/informations/photo.png'
 // 公共类型声明
 import { ConfigType, PackagesCategoryEnum } from '@/packages/index.d'
 // 当前[信息模块]分类声明
@@ -56,6 +54,23 @@ export const ImageConfig: ConfigType = {
   package: PackagesCategoryEnum.INFORMATIONS,
   // 图表类型
   chartFrame: ChartFrameEnum.COMMON,
+  // 图片 (注意！图片存放的路径必须在 src/assets/images/chart/包分类名称/*)
+  // 文件夹名称需要和包分类名称一致: PackagesCategoryEnum.INFORMATIONS
+  image: 'photo.png'
+}
+
+```
+:::warning 注意！
+  `v1.1.9 / v2.1.6` 版本以下，图片需要直接引入。但是开发环境生成的组件，在生产环境的层级展示中图片会有问题。
+:::
+
+使用方式如下：
+```ts
+// 展示图片
+import image from '@/assets/images/chart/informations/photo.png'
+
+export const ImageConfig: ConfigType = {
+  // .....和上面一致
   // 图片
   image: image
 }
@@ -64,7 +79,7 @@ export const ImageConfig: ConfigType = {
 `config.ts` 内容如下，在创建新图表时会执行 `new Config()`
 ```ts
 // 公共类型
-import { publicConfig } from '@/packages/public'
+import { PublicConfigClass } from '@/packages/public'
 // 公共类型
 import { CreateComponentType } from '@/packages/index.d'
 // 获取上面的 index 配置内容
@@ -82,7 +97,7 @@ export const option = {
 }
 
 // 图表类
-export default class Config extends publicConfig implements CreateComponentType {
+export default class Config extends PublicConfigClass implements CreateComponentType {
   public key = ImageConfig.key
   public chartConfig = cloneDeep(ImageConfig)
   public option = cloneDeep(option)
