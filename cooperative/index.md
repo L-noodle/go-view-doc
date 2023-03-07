@@ -126,8 +126,7 @@ const randomSort = (arr) => {
 }
 
 .goview-sponsor img {
-  max-width: 180px;
-  max-height: 50px;;
+  max-height: 50px;
 }
 
 .goview-sponsor.alone img {
@@ -166,12 +165,17 @@ const randomSort = (arr) => {
 .vp-sponsor-section {
   margin-top: 0px;
 }
-@media (max-width: 720px) {
-  .vp-sponsor-grid-item-pd {
+
+@media (max-width: 700px) {
+  .VPSponsors.vp-sponsor.aside .vp-sponsor-section:first-child .vp-sponsor-grid-item {
+    width: calc((100% - 4px * 2) / 2);
+  }
+   .vp-sponsor-grid-item-pd {
     justify-content: center;
   }
   .gitee-name {
     display: none;
   }
 }
+
 </style>

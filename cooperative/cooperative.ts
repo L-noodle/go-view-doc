@@ -28,12 +28,8 @@ const dataJson = {
       img: `/cooperative/dromara.png`
     },
     {
-      name: '图森未来',
-      img: `/cooperative/图森未来.png`
-    },
-    {
-      name: '易软天创',
-      img: `/cooperative/易软天创.png`
+      name: '中国能建天津电建',
+      img: `/cooperative/中国能建天津电建.jpg`,
     },
     {
       name: '禅道',
@@ -112,14 +108,61 @@ const dataJson = {
       img: `/cooperative/云腾五洲.png`
     },
     {
-      name: '...',
-      img: ''
+      name: '真容软件',
+      img: `/cooperative/真容软件.png`
     },
     {
-      name: '中国能源建设集团',
-      img: `/cooperative/中国能源建设集团.png`,
-      alone: true
+      name: '时信软件',
+      img: `/cooperative/时信软件.png`
     },
+    {
+      name: '南通汉联',
+      img: `/cooperative/南通汉联.png`
+    },
+    {
+      name: '绿住云',
+      img: `/cooperative/绿住云.png`
+    },
+    {
+      name: '星河千帆',
+      img: `/cooperative/星河千帆.png`
+    },
+    {
+      name: '轻易云.png',
+      img: `/cooperative/轻易云.png`,
+    },
+    {
+      name: '艾倍特斯.png',
+      img: `/cooperative/艾倍特斯.png`,
+    },
+    {
+      name: '依柯力.png',
+      img: `/cooperative/依柯力.png`,
+    },
+    {
+      name: '3dsworks .png',
+      img: `/cooperative/3dsworks .png`,
+    },
+    {
+      name: '万旺科技.png',
+      img: `/cooperative/万旺科技.png`,
+    },
+    {
+      name: '云创.png',
+      img: `/cooperative/云创.png`,
+    },
+    {
+      name: '禾店科技.png',
+      img: `/cooperative/禾店科技.png`,
+    },
+    {
+      name: '中航路通.png',
+      img: `/cooperative/中航路通.png`,
+    },
+    {
+      name: '小游.png',
+      img: `/cooperative/小游.png`,
+    }
   ],
   gold: []
 }
@@ -238,7 +281,8 @@ export function useCooperative() {
 function mapCooperative(sponsors: Sponsors, splice = false) {
   return [
     {
-      size: 'big',
+      // size: 'big',
+      size: 'medium',
       items: mapImgPath(sponsors['platinum'], splice)
     },
     {
