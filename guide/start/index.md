@@ -20,12 +20,13 @@ GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图�
 
 `GoView 源码`地址：[https://gitee.com/MTrun/go-view](https://gitee.com/MTrun/go-view)
 
-`文档源码`地址：[https://gitee.com/MTrun/go-view-doc](https://gitee.com/MTrun/go-view-doc)
-
-后端地址：
-
+后端地址（社区实现，仅供参考）：
+- `接口文档`[https://docs.apipost.cn](https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3) (不是最新, 以前端代码为准)
+- --
 - `JAVA` [https://gitee.com/MTrun/go-view-serve](https://gitee.com/MTrun/go-view-serve) (当前使用)
 - `.NET` [https://gitee.com/sun_xiang_yu/go-view-dotnet](https://gitee.com/sun_xiang_yu/go-view-dotnet)
+- `NODE` [https://gitee.com/qwdingyu/led](https://gitee.com/qwdingyu/led)
+- `Docker 镜像` [https://gitee.com/AHEAD4/go-view-docker](https://gitee.com/AHEAD4/go-view-docker)
 
 ---
 
@@ -137,7 +138,7 @@ make dist
 
 ## 交流
 
-QQ 群(问题讨论)：1030129384 --------&&------------ 个人 QQ（商业授权）
+QQ 群(问题讨论)：663629294 --------&&------------ 个人 QQ（商业授权）
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px">
   <img src="./images/qq.png" style="margin: 20px; height: 300px;"/>
