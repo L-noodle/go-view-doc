@@ -1,8 +1,8 @@
 ---
 layout: home
 
-title: GoView
-titleTemplate: 低代码数据可视化平台
+title: GoView 说明文档
+titleTemplate: 低代码数据可视化开发平台
 
 hero:
   name: GoView
@@ -52,6 +52,6 @@ import { onMounted } from 'vue'
 import { fetchReleaseTag } from './.vitepress/utils/fetchReleaseTag.js'
 
 onMounted(() => {
-  fetchReleaseTag('v1.1.9')
+  fetchReleaseTag('v1.2.4')
 })
 </script>

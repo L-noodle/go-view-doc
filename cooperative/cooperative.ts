@@ -162,7 +162,19 @@ const dataJson = {
     {
       name: '小游.png',
       img: `/cooperative/小游.png`,
-    }
+    },
+    {
+      name: '从晶.png',
+      img: `/cooperative/从晶.png`,
+    },
+    {
+      name: '融安.png',
+      img: `/cooperative/融安.png`,
+    },
+    {
+      name: '金实创展',
+      img: `/cooperative/金实创展.png`,
+    },
   ],
   gold: []
 }
@@ -172,22 +184,30 @@ export const membersJson = {
   gold: [
     {
       name: '开源oschina',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/41/123301_bdj_1593958517.png!avatar60'
+      img: ''
     },
     {
       name: 'dodu',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/136/410525_dodu_1609556810.png!avatar60'
+      img: ''
     },
     {
       name: 'daidai',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/1780/5340105_memeda520_1653537198.png!avatar60'
+      img: ''
     },
     {
       name: 'jiangcheng',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/1841/5525823_jiang_cheng_1_1604547199.png!avatar60'
+      img: ''
     },
     {
       name: 'wangzhiqiang',
+      img: ''
+    },
+    {
+      name: 'headmasterZhao',
+      img: ''
+    },
+    {
+      name: 'jeo_young',
       img: ''
     },
     {
@@ -199,11 +219,23 @@ export const membersJson = {
       img: ''
     },
     {
+      name: 'szy',
+      img: ''
+    },
+    {
+      name: 'Min',
+      img: ''
+    },
+    {
       name: 'yangwq7',
       img: ''
     },
     {
       name: 'Ryker',
+      img: ''
+    },
+    {
+      name: '"zxzsxf"',
       img: ''
     },
     {
@@ -215,16 +247,16 @@ export const membersJson = {
       img: ''
     },
     {
-      name: '王志强',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/762/2288381_assxy_1654930289.png!avatar60'
-    },
-    {
       name: '坨坨的老父亲',
       img: ''
     },
     {
+      name: 'aresn',
+      img: ''
+    },
+    {
       name: 'alex',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/99/299176_alex_li_1620720471.png!avatar60'
+      img: ''
     },
     {
       name: 'hguan',
@@ -232,11 +264,11 @@ export const membersJson = {
     },
     {
       name: 'wkj',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/2593/7779169_jiangg21_1594002289.png!avatar60'
+      img: ''
     },
     {
       name: 'zh',
-      img: 'https://portrait.gitee.com/uploads/avatars/user/1803/5410478_zhanghan966_1633751606.png!avatar60'
+      img: ''
     },
     {
       name: 'Mr.cao',
@@ -251,7 +283,7 @@ export const membersJson = {
       img: ''
     },
     {
-      name: 'zhaolei-hu',
+      name: '123',
       img: ''
     },
     {
@@ -259,13 +291,41 @@ export const membersJson = {
       img: ''
     },
     {
-      name: 'Mr.cao',
+      name: '且听风吟720',
+      img: ''
+    },
+    {
+      name: 'alucardpj',
+      img: ''
+    },
+    {
+      name: 'xiangmaoshuo',
+      img: ''
+    },
+    {
+      name: 'CarnivalO',
+      img: ''
+    },
+    {
+      name: 'limingzhang',
+      img: ''
+    },
+    {
+      name: 'NuroDante',
+      img: ''
+    },
+    {
+      name: 'GuoKongQuan',
       img: ''
     },
     {
       name: '',
       img: ''
-    }
+    },
+    {
+      name: '',
+      img: ''
+    },
   ]
 }
 
